@@ -17,27 +17,15 @@ public class MyAPIController : ControllerBase
         {
             switch (action)
             {
-                case ActionType.sumandcheck:
+                case ActionType.MoveRight:
                     //iNumber = sNumbers.GetSpecialSum();
                     //return Ok(new { result = iNumber, isPrime = iNumber.IsPrime() });
                     return Ok();
-                case ActionType.checkprime:
+                case ActionType.MoveUp:
                     // TODO
                     //return Ok(new { isPrime = iNumber.IsPrime() });
                     return Ok();
-                case ActionType.pick:
-                // TODO
-                case ActionType.drop:
-                // TODO
-                case ActionType.moveLeft:
-                // TODO
-                case ActionType.moveRight:
-                // TODO
-                case ActionType.moveForward:
-                // TODO
-                case ActionType.moveBackWard:
-                    // TODO
-                    break;
+              
             }
         }
         catch (Exception ex)
@@ -56,25 +44,17 @@ public class MyAPIController : ControllerBase
         {
             switch (action)
             {
-                case ActionType.sumandcheck:
-                    //iNumber = sNumbers.GetSpecialSum();
-                    //return Ok(new { result = iNumber, isPrime = iNumber.IsPrime() });
-                    return Ok();
-                case ActionType.checkprime:
-                    // TODO
-                    //return Ok(new { isPrime = iNumber.IsPrime() });
-                    return Ok();
-                case ActionType.pick:
+                case ActionType.Pick:
                 // TODO
-                case ActionType.drop:
+                case ActionType.Drop:
                 // TODO
-                case ActionType.moveLeft:
+                case ActionType.MoveLeft:
                 // TODO
-                case ActionType.moveRight:
+                case ActionType.MoveRight:
                 // TODO
-                case ActionType.moveForward:
+                case ActionType.MoveUp:
                 // TODO
-                case ActionType.moveBackWard:
+                case ActionType.MoveDown:
                     // TODO
                     break;
             }
