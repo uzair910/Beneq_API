@@ -9,31 +9,31 @@ using System.Linq;
 public class MyAPIController : ControllerBase
 {
     // GET api/values
-    //[EnableCors()]
-    [HttpGet]
-    public ActionResult Get(ActionType action, string sNumbers, int iNumber)
-    {
-        try
-        {
-            switch (action)
-            {
-                case ActionType.MoveRight:
-                    //iNumber = sNumbers.GetSpecialSum();
-                    //return Ok(new { result = iNumber, isPrime = iNumber.IsPrime() });
-                    return Ok();
-                case ActionType.MoveUp:
-                    // TODO
-                    //return Ok(new { isPrime = iNumber.IsPrime() });
-                    return Ok();
+    ////[EnableCors()]
+    //[HttpGet]
+    //public ActionResult Get(ActionType action, string sNumbers, int iNumber)
+    //{
+    //    try
+    //    {
+    //        switch (action)
+    //        {
+    //            case ActionType.MoveRight:
+    //                //iNumber = sNumbers.GetSpecialSum();
+    //                //return Ok(new { result = iNumber, isPrime = iNumber.IsPrime() });
+    //                return Ok();
+    //            case ActionType.MoveUp:
+    //                // TODO
+    //                //return Ok(new { isPrime = iNumber.IsPrime() });
+    //                return Ok();
               
-            }
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex);
-        }
-        return BadRequest();
-    }
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        return BadRequest(ex);
+    //    }
+    //    return BadRequest();
+    //}
 
     // GET api/values
     //[EnableCors()]
