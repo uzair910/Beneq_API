@@ -51,8 +51,6 @@ public class MyAPIController : ControllerBase
         }
     }
 }
-
-
 public enum ActionType
 {
     Pick,
