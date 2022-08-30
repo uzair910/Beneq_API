@@ -20,27 +20,27 @@ public class MyAPIController : ControllerBase
             {
                 case ActionType.Pick:
                     isSuccess = ArmSingletonInterface.Instance.PickObject();
-                    retMessage = isSuccess ? "Arm has picked the object." : "Pick request failed: Arm is already holding an object.";
+                    retMessage = isSuccess ? API_Reply_Strings.Message_Pick_Success : API_Reply_Strings.Message_Pick_Fail;
                     break;
                 case ActionType.Drop:
                     isSuccess = ArmSingletonInterface.Instance.DropObject();
-                    retMessage = isSuccess ? "Arm has dropped the object." : "Drop request failed: The Arm is not holding any object at the moment.";
+                    retMessage = isSuccess ?  API_Reply_Strings.Message_Drop_Success : API_Reply_Strings.Message_Drop_Fail ;
                     break;
                 case ActionType.MoveLeft:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(3);
-                    retMessage = isSuccess ? "Arm moved to the left." : "Move to Left request failed: The Arm is not holding any object at the moment.";
+                    isSuccess = ArmSingletonInterface.Instance.MoveObject(2);
+                    retMessage = isSuccess ? API_Reply_Strings.Message_MoveLeft_Success : API_Reply_Strings.Message_MoveLeft_Fail ;
                     break;
                 case ActionType.MoveRight:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(4);
-                    retMessage = isSuccess ? "Arm moved to the right." : "Move to right request failed: The Arm is not holding any object at the moment.";
+                    isSuccess = ArmSingletonInterface.Instance.MoveObject(3);
+                    retMessage = isSuccess ? API_Reply_Strings.Message_MoveRight_Success : API_Reply_Strings.Message_MoveRight_Fail;
                     break;
                 case ActionType.MoveUp:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(4);
-                    retMessage = isSuccess ? "Arm moved one step forward." : "Move forward request failed: The Arm is not holding any object at the moment.";
+                    isSuccess = ArmSingletonInterface.Instance.MoveObject(0);
+                    retMessage = isSuccess ? API_Reply_Strings.Message_MoveUp_Success : API_Reply_Strings.Message_MoveUp_Fail ;
                     break;
                 case ActionType.MoveDown:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(4);
-                    retMessage = isSuccess ? "Arm moved one step backwards." : "Move backward request failed: The Arm is not holding any object at the moment.";
+                    isSuccess = ArmSingletonInterface.Instance.MoveObject(1);
+                    retMessage = isSuccess ? API_Reply_Strings.Message_MoveDown_Success : API_Reply_Strings.Message_MoveDown_Fail ;
                     break;
             }
             return Ok(new { result = retMessage, success = isSuccess });
