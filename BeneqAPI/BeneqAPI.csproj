@@ -7,12 +7,16 @@
   <ItemGroup>
     <Compile Remove="Pages\**" />
     <Compile Remove="Properties\**" />
+    <Compile Remove="wwwroot\**" />
     <Content Remove="Pages\**" />
     <Content Remove="Properties\**" />
+    <Content Remove="wwwroot\**" />
     <EmbeddedResource Remove="Pages\**" />
     <EmbeddedResource Remove="Properties\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
     <None Remove="Pages\**" />
     <None Remove="Properties\**" />
+    <None Remove="wwwroot\**" />
     <_WebToolingArtifacts Remove="Properties\**" />
   </ItemGroup>
 
