@@ -19,27 +19,27 @@ public class MyAPIController : ControllerBase
             switch (action)
             {
                 case ActionType.Pick:
-                    isSuccess = ArmSingletonInterface.Instance.PickObject();
+                    isSuccess = ArmSingletonInterfaceController.Instance.PickObject();
                     retMessage = isSuccess ? API_Reply_Strings.Message_Pick_Success : API_Reply_Strings.Message_Pick_Fail;
                     break;
                 case ActionType.Drop:
-                    isSuccess = ArmSingletonInterface.Instance.DropObject();
+                    isSuccess = ArmSingletonInterfaceController.Instance.DropObject();
                     retMessage = isSuccess ?  API_Reply_Strings.Message_Drop_Success : API_Reply_Strings.Message_Drop_Fail ;
                     break;
                 case ActionType.MoveLeft:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(2);
+                    isSuccess = ArmSingletonInterfaceController.Instance.MoveObject(2);
                     retMessage = isSuccess ? API_Reply_Strings.Message_MoveLeft_Success : API_Reply_Strings.Message_MoveLeft_Fail ;
                     break;
                 case ActionType.MoveRight:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(3);
+                    isSuccess = ArmSingletonInterfaceController.Instance.MoveObject(3);
                     retMessage = isSuccess ? API_Reply_Strings.Message_MoveRight_Success : API_Reply_Strings.Message_MoveRight_Fail;
                     break;
                 case ActionType.MoveUp:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(0);
+                    isSuccess = ArmSingletonInterfaceController.Instance.MoveObject(0);
                     retMessage = isSuccess ? API_Reply_Strings.Message_MoveUp_Success : API_Reply_Strings.Message_MoveUp_Fail ;
                     break;
                 case ActionType.MoveDown:
-                    isSuccess = ArmSingletonInterface.Instance.MoveObject(1);
+                    isSuccess = ArmSingletonInterfaceController.Instance.MoveObject(1);
                     retMessage = isSuccess ? API_Reply_Strings.Message_MoveDown_Success : API_Reply_Strings.Message_MoveDown_Fail ;
                     break;
             }

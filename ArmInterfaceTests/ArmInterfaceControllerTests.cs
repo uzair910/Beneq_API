@@ -19,38 +19,38 @@ namespace ArmInterfaceTests
 
 
         [Test, Description("Test to check the implemented Interface for the arm works properly and follows correct workflow.")]
-        public void Test_ArmSingletonInterface()
+        public void Test_ArmSingletonInterfaceController()
         {
             // The program should not drop an object without picking it up first. The method should return false.
-            Assert.IsFalse(ArmSingletonInterface.Instance.DropObject());
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.DropObject());
 
             // The program should not move an object without picking it up first. The method Move should return false.
-            Assert.IsFalse(ArmSingletonInterface.Instance.MoveObject(0));
-            Assert.IsFalse(ArmSingletonInterface.Instance.MoveObject(1));
-            Assert.IsFalse(ArmSingletonInterface.Instance.MoveObject(2));
-            Assert.IsFalse(ArmSingletonInterface.Instance.MoveObject(3));
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.MoveObject(0));
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.MoveObject(1));
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.MoveObject(2));
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.MoveObject(3));
             // The program should consider an invalid enumeration value to be default direction of Up.
-            Assert.IsFalse(ArmSingletonInterface.Instance.MoveObject(6));
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.MoveObject(6));
 
             // lets pick the Object. The method should return true because no object has been picked up so far.
-            Assert.IsTrue(ArmSingletonInterface.Instance.PickObject());
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.PickObject());
 
             // If the object is picked up, and a command is made to pick the object up again, the program should fail to do so and return false.
-            Assert.IsFalse(ArmSingletonInterface.Instance.PickObject());
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.PickObject());
 
             // Till this point, the arm is holding the object. The program should be able to move the arm in any direction now.
-            Assert.IsTrue(ArmSingletonInterface.Instance.MoveObject(0));
-            Assert.IsTrue(ArmSingletonInterface.Instance.MoveObject(1));
-            Assert.IsTrue(ArmSingletonInterface.Instance.MoveObject(2));
-            Assert.IsTrue(ArmSingletonInterface.Instance.MoveObject(3));
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.MoveObject(0));
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.MoveObject(1));
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.MoveObject(2));
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.MoveObject(3));
             // The program should consider an invalid enumeration value to be default direction of Up.
-            Assert.IsTrue(ArmSingletonInterface.Instance.MoveObject(6));
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.MoveObject(6));
 
             // Since the arm is holding an object, it should be able to drop the object successfully.
-            Assert.IsTrue(ArmSingletonInterface.Instance.DropObject());
+            Assert.IsTrue(ArmSingletonInterfaceController.Instance.DropObject());
 
             //Sinc the object was dropped already, the command to drop the object again should fail.
-            Assert.IsFalse(ArmSingletonInterface.Instance.DropObject());
+            Assert.IsFalse(ArmSingletonInterfaceController.Instance.DropObject());
         }
 
     }

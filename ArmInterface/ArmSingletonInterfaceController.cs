@@ -2,18 +2,18 @@
 
 namespace ArmInterface
 {
-    public sealed class ArmSingletonInterface
+    public sealed class ArmSingletonInterfaceController
     {
-        private ArmSingletonInterface() { }
-        private static ArmSingletonInterface _obj = null;
+        private ArmSingletonInterfaceController() { }
+        private static ArmSingletonInterfaceController _obj = null;
         private static bool isPicked = true;
-        public static ArmSingletonInterface Instance
+        public static ArmSingletonInterfaceController Instance
         {
             get
             {
                 if (_obj == null)
                 {
-                    _obj = new ArmSingletonInterface();
+                    _obj = new ArmSingletonInterfaceController();
                     isPicked = false;
                 }
                 return _obj;
@@ -33,6 +33,7 @@ namespace ArmInterface
         {
             if (isPicked)
             {
+                // ToDo: Invoke the actual method from the ArmInterface.
                 isPicked = false;
                 return true;
             }

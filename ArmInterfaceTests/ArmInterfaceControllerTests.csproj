@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArmInterface\ArmInterface.csproj" />
+    <ProjectReference Include="..\ArmInterface\ArmInterfaceController.csproj" />
     <ProjectReference Include="..\BeneqAPI\BeneqAPI.csproj" />
   </ItemGroup>
 

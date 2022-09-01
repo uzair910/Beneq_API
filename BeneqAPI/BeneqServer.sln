@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeneqAPI", "BeneqAPI.csproj", "{7D94FB4D-FBDF-4BEC-9F5A-E5C919184531}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmInterface", "..\ArmInterface\ArmInterface.csproj", "{2A67F2D3-E51D-4198-8A51-E255C253391A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmInterfaceController", "..\ArmInterface\ArmInterfaceController.csproj", "{2A67F2D3-E51D-4198-8A51-E255C253391A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArmInterfaceTests", "..\ArmInterfaceTests\ArmInterfaceTests.csproj", "{A144B66F-4CC7-4D9F-83F9-2826D99BF833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmInterfaceControllerTests", "..\ArmInterfaceTests\ArmInterfaceControllerTests.csproj", "{A144B66F-4CC7-4D9F-83F9-2826D99BF833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
