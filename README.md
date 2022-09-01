@@ -10,4 +10,5 @@ In order to build the project, you may need to include a few packages.
     SwashBuckle.AspNetCore.
     
   
-  The project should compile in Visual studio, after these above packages are included in the correct (sub)projects.
+The project should **compile** in Visual studio, after these above packages are included in the correct (sub)projects.
+In order to build the project, select the BeneqAPI Subproject as startup project and  then run the solution.
