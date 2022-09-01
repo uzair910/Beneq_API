@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <Compile Remove="Properties\**" />
+    <Content Remove="Pages\**" />
+    <Content Remove="Properties\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Pages\**" />
+    <None Remove="Properties\**" />
+    <_WebToolingArtifacts Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
