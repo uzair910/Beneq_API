@@ -7,10 +7,10 @@ namespace ArmInterfaceTests
     public class ArmInterfaceTestSuite
     {
         [Test, Description("Test to check ToDirectionEnum extension method for integer works properly.")]
-        [TestCase(3, ExpectedResult = Direction.Right, Description = "Integer value of 3 should be equilant to the Direction Right.")]
-        [TestCase(0, ExpectedResult = Direction.Up, Description = "Integer value of 0 should be equilant to the Direction Up.")]
-        [TestCase(1, ExpectedResult = Direction.Down, Description = "Integer value of 1 should be equilant to the Direction Down.")]
-        [TestCase(2, ExpectedResult = Direction.Left, Description = "Integer value of 2 should be equilant to the Direction Left.")]
+        [TestCase(3, ExpectedResult = Direction.Right, Description = "An integer value of 3 should be equilant to the Direction Right.")]
+        [TestCase(0, ExpectedResult = Direction.Up, Description = "An integer value of 0 should be equilant to the Direction Up.")]
+        [TestCase(1, ExpectedResult = Direction.Down, Description = "An integer value of 1 should be equilant to the Direction Down.")]
+        [TestCase(2, ExpectedResult = Direction.Left, Description = "An integer value of 2 should be equilant to the Direction Left.")]
         [TestCase(-4, ExpectedResult = Direction.Up, Description = "An integer value outside the Direction enumeration should return default value of Up.")]
         public Direction Test_IntToDirection_ConvertionMethod(int iDirection)
         {
@@ -18,7 +18,7 @@ namespace ArmInterfaceTests
         }
 
 
-        [Test, Description("Test to check ToDirectionEnum extension method for integer works properly.")]
+        [Test, Description("Test to check the implemented Interface for the arm works properly and follows correct workflow.")]
         public void Test_ArmSingletonInterface()
         {
             // The program should not drop an object without picking it up first. The method should return false.
